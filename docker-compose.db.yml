@@ -1,0 +1,15 @@
+services:
+  hono-server-db:
+    image: postgres
+    container_name: hono-server-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: example
+      PGDATA: /data/postgres
+      POSTGRES_DB: hono-server-db
+    volumes:
+      - postgres:/data/postgres
+
+volumes:
+  postgres:

@@ -12,6 +12,8 @@ COPY . .
 
 RUN npm run build
 
+RUN npm run db:push
+
 EXPOSE 3000
 
 CMD ["npm", "start"]

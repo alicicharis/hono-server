@@ -42,7 +42,7 @@ app.get("/setup", async (c) => {
 });
 
 console.log(`Server is running on port ${port}`);
-
+console.log("DB URL: ", process.env.DATABASE_URL!);
 serve({
   fetch: app.fetch,
   port,
